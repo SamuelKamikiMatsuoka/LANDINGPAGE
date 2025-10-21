@@ -1,0 +1,346 @@
+/* ANIMAÇÃO SCROLL — elementos começam invisíveis */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Quando aparece */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ✨ NOVO: Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Botões - efeito hover */
+.btn-header,
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-header:hover,
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Cards - efeito hover */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== Reset e fontes ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4ece2;
+  color: #3b2e2a;
+}
+
+/* ===== Logo no cabeçalho ===== */
+.logo img {
+  height: 100.5px;        /* ajusta o tamanho da logo */
+  width: auto;
+  display: block;
+}
+
+/* Ajuste para centralizar verticalmente com o menu */
+.header .logo {
+  display: flex;
+  align-items: center;
+}
+
+/* ===== Cabeçalho ===== */
+.header {
+  background-color: #3b2e2a;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #d4a373;
+}
+
+.menu a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: #d4a373;
+}
+
+.btn-header {
+  background-color: #d4a373;
+  color: #3b2e2a;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===== Seção Hero ===== */
+.hero {
+  background: url("https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=60")
+    no-repeat center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding-left: 8%;
+}
+
+.hero-content {
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.hero p {
+  color: #f4ece2;
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+
+.btn {
+  background-color: #d4a373;
+  color: #3b2e2a;
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #b48a61;
+}
+
+/* ===== Bebidas ===== */
+.drinks {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.drinks h2 {
+  font-size: 2.5rem;
+  color: #3b2e2a;
+  margin-bottom: 10px;
+}
+
+.drink-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  color: #3b2e2a;
+  margin: 15px 0 5px;
+}
+
+.card p {
+  color: #5a4b47;
+  padding: 0 15px 20px;
+}
+
+/* ===== Promoção ===== */
+.deal {
+  background-color: #e7d5c1;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.deal-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.deal-content img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.deal-text {
+  max-width: 400px;
+}
+
+.deal-text h3 {
+  color: #3b2e2a;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* ===== Rodapé ===== */
+.footer {
+  background-color: #3b2e2a;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.footer-col h4 {
+  color: #d4a373;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #d4a373;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #c8b9ae;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
