@@ -1,23 +1,23 @@
-/* ANIMAÇÃO SCROLL — elementos começam invisíveis */
+
 .reveal {
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
 
-/* Quando aparece */
+
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
 
 
-/* ✨ NOVO: Scroll suave */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Botões - efeito hover */
+
 .btn-header,
 .btn {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -29,7 +29,7 @@ html {
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Cards - efeito hover */
+
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -52,14 +52,14 @@ body {
   color: #3b2e2a;
 }
 
-/* ===== Logo no cabeçalho ===== */
+
 .logo img {
   height: 100.5px;        /* ajusta o tamanho da logo */
   width: auto;
   display: block;
 }
 
-/* Ajuste para centralizar verticalmente com o menu */
+
 .header .logo {
   display: flex;
   align-items: center;
@@ -108,7 +108,7 @@ body {
   font-weight: 600;
 }
 
-/* ===== Seção Hero ===== */
+
 .hero {
   background: url("https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=60")
     no-repeat center/cover;
@@ -151,7 +151,7 @@ body {
   background-color: #b48a61;
 }
 
-/* ===== Bebidas ===== */
+
 .drinks {
   padding: 100px 50px;
   text-align: center;
@@ -198,7 +198,7 @@ body {
   padding: 0 15px 20px;
 }
 
-/* ===== Promoção ===== */
+
 .deal {
   background-color: #e7d5c1;
   padding: 80px 50px;
